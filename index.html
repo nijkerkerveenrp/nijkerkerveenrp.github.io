@@ -18,15 +18,17 @@
 <div class="navbar">
     <div class="max-width">
         <ul class="menu">
-            <li><a href="#main">Home</a></li>
-            <li><a href="#about-us">Over ons</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#discord">Doe mee!</a></li>
-            <li><a  target="_blank" href="https://nijkerkerveenrp.github.io/Wetboek/">Regels</a></li>
-            <li><a href="#solliciteren">Solliciteren</a></li>
-            <li><a  target="_blank" href="https://discord.gg/NQn8Y7uyKZ">Discord</a></li>
+            <li><a  id="knop"href="#main">Home</a></li>
+            <li><a  id="knop"href="#about-us">Over ons</a></li>
+            <li><a  id="knop"href="#">Store</a></li>
+            <li><a id="knop" href="#discord">Doe mee!</a></li>
+            <li><a  id="knop" target="_blank" href="https://nijkerkerveenrp.github.io/Wetboek/">Regels</a></li>
+            <li><a  id="knop"href="#solliciteren">Solliciteren</a></li>
+            <li><a  id="knop" target="_blank" href="https://discord.gg/NQn8Y7uyKZ">Discord</a></li>
         </ul>
-       
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
 </div> <!-- Navbar -->
 
@@ -169,6 +171,17 @@ crossorigin="anonymous"></script>
     })
     
     })
+    $(document).on('click', '.menu-btn', function() {
+        console.log("a");
+        $(".navbar .menu").toggleClass("active");
+        $(".menu-btn i").toggleClass("active");
+    });
+
+    $(document).on('click', '#knop', function() {
+        console.log("b");
+        $(".navbar .menu").toggleClass("active");
+        $(".menu-btn i").toggleClass("active");
+    });
 </script>
 
 </body>

@@ -7,7 +7,9 @@
 }
 
 
-body{
+html, body{ 
+   margin: 0;
+  padding: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -91,6 +93,13 @@ position: relative;
     transform: scaleX(1);
     transform-origin: bottom;
   }
+  .menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
 
 /* Home */
 
@@ -136,7 +145,7 @@ position: relative;
 
 .image-container{
   width: 50%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: center;
   height: 62.5%;
@@ -452,4 +461,170 @@ text-decoration: underline;
         height: 1px; /* Thickness of the underline */
         background-image: linear-gradient(214deg, #ff285c, #b010fb);
         z-index: 3;
+    }
+
+
+    @media only screen and (max-width: 1806px) {
+      .image-container{
+        display: none;
+      }
+
+      .navbar .max-width{
+        justify-content: center;
+      }
+
+      .heading-container{
+        justify-content: center;
+        text-align: center;
+      }
+
+      .heading-container .buttons{
+        justify-content: center;
+      }
+
+      .heading-container{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media only screen and (max-width: 1032px) {
+      
+      .navbar .max-width{
+        justify-content: flex-end;
+      }
+      .heading-container{
+        display: flex;
+        width: 100%;
+        white-space: normal;
+      }
+
+      .heading-container h1{
+        white-space: normal!important;
+      }
+    .grid{
+      grid-template-columns: repeat(2, 1fr)!important;
+    }
+
+    .navbar .max-width{
+      width: 100%;
+
+    }
+
+    .navbar .menu{
+      display: block;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+
+  .navbar .menu li{
+      display: block;
+  }
+
+  .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+  }
+
+  .menu-btn{
+      display: block;
+      z-index: 999;
+      /* position: absolute; */
+      /* top: 20%; */
+      /* right: 10%; */
+      margin-right: 5%;
+      padding: 5%;
+  }
+
+
+  .menu-btn i.active:before{
+      content: '\f00d' ;
+  }
+
+
+  .navbar .menu.active{
+      left: 0;
+  }
+
+  #main .max-width{
+    width: 95%;
+  }
+    }
+
+    @media only screen and (max-width: 811px) {
+    
+      .buttons {
+        flex-direction: column;
+       width: 50%; 
+       justify-content: center;
+      }
+
+      
+    }
+ @media only screen and (max-width:  696px) {
+    
+  #main .max-width{
+    align-items: first baseline;
+  }
+
+  #main {
+    height: 75vh;
+  }
+
+  .heading-container h1{
+    font-size: 2.5rem;
+  }
+
+  .heading-container p{
+    font-size: .75rem;
+  }
+
+  .buttons{
+    width: 75%;
+  }
+  .buttons a{
+    font-size: .75rem;
+    padding: 8px 40px;
+  }
+      
+  .heading-container{
+    position: relative;
+  }
+
+  .visible{
+    position: absolute;
+    bottom: -50%;
+  }
+    }
+
+    
+    @media only screen and (max-width: 500px) {
+      .grid{
+        grid-template-columns: repeat(1, 1fr)!important;
+      }
+
+      #about-us .max-width{
+        width: 95%;
+      }
+
+      #solliciteren .max-width{
+        width: 95%;
+      }
+
+      .heading-container h1{
+        font-size: 2rem;
+      }
+    
+   
     }
