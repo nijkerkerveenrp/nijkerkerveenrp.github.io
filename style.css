@@ -128,7 +128,7 @@ position: relative;
 
 #main .max-width{
   z-index: 2;
-  width: 67.5%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,7 +145,7 @@ position: relative;
 
 .image-container{
   width: 50%;
-  display: none;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 62.5%;
@@ -465,37 +465,38 @@ text-decoration: underline;
 
 
     @media only screen and (max-width: 1806px) {
-      .image-container{
-        display: none;
-      }
+     
 
       .navbar .max-width{
         justify-content: center;
       }
 
-      .heading-container{
-        justify-content: center;
-        text-align: center;
-      }
 
-      .heading-container .buttons{
-        justify-content: center;
-      }
-
+   
       .heading-container{
-        width: 100%;
-        justify-content: center;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        /* flex-direction: column; */
       }
     }
+
+    @media only screen and (max-width: 1306px){
+      .heading-container{
+        width: 100%;
+      }
+    } 
 
     @media only screen and (max-width: 1032px) {
       
       .navbar .max-width{
         justify-content: flex-end;
       }
+
+
+      #main .max-width{
+        
+        flex-direction: column;
+      }
+
       .heading-container{
         display: flex;
         width: 100%;
@@ -560,13 +561,26 @@ text-decoration: underline;
   #main .max-width{
     width: 95%;
   }
+
+  .image-container{
+    display: none;
+   }
+
+
+    .heading-container{
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+    }
     }
 
     @media only screen and (max-width: 811px) {
-    
+
+
       .buttons {
         flex-direction: column;
-       width: 50%; 
+       width: 100%; 
        justify-content: center;
       }
 
@@ -574,7 +588,7 @@ text-decoration: underline;
     }
  @media only screen and (max-width:  696px) {
     
-  #main .max-width{
+  /* #main .max-width{
     align-items: first baseline;
   }
 
@@ -605,7 +619,7 @@ text-decoration: underline;
   .visible{
     position: absolute;
     bottom: -50%;
-  }
+  } */
     }
 
     
@@ -622,9 +636,7 @@ text-decoration: underline;
         width: 95%;
       }
 
-      .heading-container h1{
-        font-size: 2rem;
-      }
+    
     
    
     }
